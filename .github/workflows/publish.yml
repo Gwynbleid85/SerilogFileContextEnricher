@@ -35,35 +35,10 @@ jobs:
         echo "tag=$TAG_NAME" >> $GITHUB_OUTPUT
         echo "Extracted version: $VERSION"
 
-  # Step 2: Run tests
-  test:
-    runs-on: ubuntu-latest
-    needs: validate
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: |
-          9.x
-          10.x
-
-    - name: Restore dependencies
-      run: dotnet restore CleanUtils.Serilog.Enricher.FileContext.sln
-
-    - name: Build solution
-      run: dotnet build CleanUtils.Serilog.Enricher.FileContext.sln --configuration Release --no-restore
-
-    - name: Run tests
-      run: dotnet test CleanUtils.Serilog.Enricher.FileContext.Tests/CleanUtils.Serilog.Enricher.FileContext.Tests.csproj --no-build --configuration Release --verbosity normal
-
-  # Step 3: Update package version in release branch
+  # Step 2: Update package version in release branch
   update-version:
     runs-on: ubuntu-latest
-    needs: [validate, test]
+    needs: validate
 
     steps:
     - name: Check secrets

@@ -1,12 +1,8 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Gwynbleid85/SerilogFileContextEnricher/main/docs/github-header-banner.png" alt="SerilogFileContextEnricher - Add file name, method name and line number to your logs" />
-</p>
+![SerilogFileContextEnricher - Add file name, method name and line number to your logs](https://raw.githubusercontent.com/Gwynbleid85/SerilogFileContextEnricher/main/docs/github-header-banner.png)
 
-<p align="center">
-  <a href="https://www.nuget.org/packages/CleanUtils.Serilog.Enricher.FileContext"><img src="https://img.shields.io/nuget/v/CleanUtils.Serilog.Enricher.FileContext.svg" alt="NuGet" /></a>
-  <a href="https://www.nuget.org/packages/CleanUtils.Serilog.Enricher.FileContext"><img src="https://img.shields.io/nuget/dt/CleanUtils.Serilog.Enricher.FileContext.svg" alt="NuGet Downloads" /></a>
-  <a href="https://github.com/Gwynbleid85/SerilogFileContextEnricher/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Gwynbleid85/SerilogFileContextEnricher.svg" alt="License" /></a>
-</p>
+[![NuGet](https://img.shields.io/nuget/v/CleanUtils.Serilog.Enricher.FileContext.svg)](https://www.nuget.org/packages/CleanUtils.Serilog.Enricher.FileContext)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/CleanUtils.Serilog.Enricher.FileContext.svg)](https://www.nuget.org/packages/CleanUtils.Serilog.Enricher.FileContext)
+[![License](https://img.shields.io/github/license/Gwynbleid85/SerilogFileContextEnricher.svg)](https://github.com/Gwynbleid85/SerilogFileContextEnricher/blob/main/LICENSE)
 
 <p align="center">
   Automatically enrich your Serilog logs with <strong>file name</strong>, <strong>method name</strong>, and <strong>line number</strong> — zero configuration, zero runtime overhead.

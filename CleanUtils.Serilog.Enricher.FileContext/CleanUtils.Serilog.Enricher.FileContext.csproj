@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <Title>CleanUtils.Serilog.Enricher.FileContext</Title>
     <PackageId>CleanUtils.Serilog.Enricher.FileContext</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Gwynbleid85</Authors>
     <Description>Automatically enrich Serilog logs with file name, method name, and line number using compile-time caller attributes. Zero runtime overhead.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>

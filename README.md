@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="docs/github-header-banner.png" alt="SerilogFileContextEnricher - Add file name, method name and line number to your logs" />
+  <img src="https://raw.githubusercontent.com/Gwynbleid85/SerilogFileContextEnricher/main/docs/github-header-banner.png" alt="SerilogFileContextEnricher - Add file name, method name and line number to your logs" />
 </p>
 
 <p align="center">
   <a href="https://www.nuget.org/packages/CleanUtils.Serilog.Enricher.FileContext"><img src="https://img.shields.io/nuget/v/CleanUtils.Serilog.Enricher.FileContext.svg" alt="NuGet" /></a>
   <a href="https://www.nuget.org/packages/CleanUtils.Serilog.Enricher.FileContext"><img src="https://img.shields.io/nuget/dt/CleanUtils.Serilog.Enricher.FileContext.svg" alt="NuGet Downloads" /></a>
-  <a href="https://github.com/Gwynbleid85/CleanUtils.Serilog.Enricher.FileContext/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Gwynbleid85/CleanUtils.Serilog.Enricher.FileContext.svg" alt="License" /></a>
+  <a href="https://github.com/Gwynbleid85/SerilogFileContextEnricher/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Gwynbleid85/SerilogFileContextEnricher.svg" alt="License" /></a>
 </p>
 
 <p align="center">

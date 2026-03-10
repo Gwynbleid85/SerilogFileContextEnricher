@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="96" fill="#6366F1"/>
+
+  <!-- C letter -->
+  <path d="M 280 115 A 150 150 0 1 0 280 397"
+        stroke="white" stroke-width="38" fill="none" stroke-linecap="round"/>
+
+  <!-- U letter nestled in C's opening -->
+  <path d="M 260 180 V 300 A 78 78 0 0 0 416 300 V 180"
+        stroke="white" stroke-width="38" fill="none" stroke-linecap="round"/>
+</svg>

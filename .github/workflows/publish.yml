@@ -154,13 +154,16 @@ jobs:
     needs: [validate, publish]
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
     - name: Create GitHub Release
-      uses: actions/create-release@v1
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.REPOSITORY_TOKEN }}
       with:
         tag_name: ${{ needs.validate.outputs.tag }}
-        release_name: Release ${{ needs.validate.outputs.tag }}
+        name: Release ${{ needs.validate.outputs.tag }}
         body: |
           ## CleanUtils.Serilog.Enricher.FileContext ${{ needs.validate.outputs.version }}
 
@@ -176,7 +179,7 @@ jobs:
         draft: false
         prerelease: false
 
-  # Step 7: Merge release branch to master and cleanup
+  # Step 7: Merge release branch to main and cleanup
   merge-and-cleanup:
     runs-on: ubuntu-latest
     needs: [validate, create-release]
@@ -188,18 +191,18 @@ jobs:
         token: ${{ secrets.REPOSITORY_TOKEN }}
         fetch-depth: 0
 
-    - name: Merge release branch to master
+    - name: Merge release branch to main
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
         git fetch origin
-        git checkout master
-        git pull origin master
+        git checkout main
+        git pull origin main
 
-        git merge origin/release/${{ needs.validate.outputs.tag }} --no-ff -m "chore: merge release/${{ needs.validate.outputs.tag }} into master"
+        git merge origin/release/${{ needs.validate.outputs.tag }} --no-ff -m "chore: merge release/${{ needs.validate.outputs.tag }} into main"
 
-        git push origin master
+        git push origin main
 
     - name: Delete release branch
       run: |

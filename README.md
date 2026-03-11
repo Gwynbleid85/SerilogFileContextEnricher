@@ -62,10 +62,8 @@ using CleanUtils.Serilog.Enricher.FileContext;
 // Style 1: Extension methods on ILogger
 Log.Logger.InformationWithContext("Order processed successfully");
 
-// Style 2: Static Logger class
-Logger.Information("Order processed successfully");
 
-// Style 3: Static ContextLog class
+// Style 2: Static ContextLog class
 ContextLog.Information("Order processed successfully");
 ```
 
@@ -96,13 +94,6 @@ Log.Logger.InformationWithContext(
     customerName
 );
 
-Logger.Warning(
-    "Retry attempt {Attempt} of {MaxRetries} for {@Operation}",
-    attempt,
-    maxRetries,
-    operationName
-);
-
 ContextLog.Error(
     "Failed to process payment {@PaymentId}: {Reason}",
     paymentId,
@@ -115,11 +106,11 @@ ContextLog.Error(
 Every log level is supported across all three styles:
 
 ```csharp
-Logger.Verbose("Entering method with param {Param}", value);
-Logger.Debug("Cache lookup for key {Key}", cacheKey);
-Logger.Information("User {UserId} logged in", userId);
-Logger.Warning("Rate limit approaching: {Current}/{Max}", current, max);
-Logger.Error("Unhandled exception in {Operation}", operationName);
+ContextLog.Verbose("Entering method with param {Param}", value);
+ContextLog.Debug("Cache lookup for key {Key}", cacheKey);
+ContextLog.Information("User {UserId} logged in", userId);
+ContextLog.Warning("Rate limit approaching: {Current}/{Max}", current, max);
+ContextLog.Error("Unhandled exception in {Operation}", operationName);
 ```
 
 ### Using with dependency-injected ILogger

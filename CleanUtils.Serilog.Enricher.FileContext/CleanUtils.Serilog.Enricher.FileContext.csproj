@@ -13,8 +13,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>logo.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/Gwynbleid85/CleanUtils.Serilog.Enricher.FileContext</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Gwynbleid85/CleanUtils.Serilog.Enricher.FileContext</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Gwynbleid85/SerilogFileContextEnricher</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Gwynbleid85/SerilogFileContextEnricher</RepositoryUrl>
     <PackageTags>serilog;enricher;logging;context;caller-info;file-context</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
